@@ -88,7 +88,17 @@ driver.implicitly_wait(10)
 # print(result)
 # assert "You entered" in result
 
-driver.get("https://the-internet.herokuapp.com/jqueryui/menu")
+driver.get("https://the-internet.herokuapp.com/typos")
+typo = driver.find_element_by_xpath("//p[2]")
+
+try:
+   assert typo.text == "Sometimes you'll see a typo, other times you won't."
+
+except:
+    print(typo.text)
+
+driver.find_element_by_link_text("Elemental Selenium").click()
+
 
 
 
