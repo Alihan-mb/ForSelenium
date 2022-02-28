@@ -1,5 +1,0 @@
-ear
-dog
-cat
-bob
-abc
